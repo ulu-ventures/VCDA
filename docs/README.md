@@ -4,7 +4,7 @@ Decision Analysis tools for Venture Capital
 ## Introduction
 This project has been seeded with a spreadsheet model that has been developed by Clint Korver over a decade of Decision Analysis of a 100 seed-stage venture deals. The model is designed for enterprise company deals and implements two popular frameworks for enterprise-focused startups -- Crossing the Chasm and The Gorilla Game, both by Jeffrey Moore. 
 
-The spreadsheet model contains special VBA software developed by Somik Raha to perform uncertainty analysis. If the basic structuring of the spreadsheet is followed, then any model within that structure can take advantage of the tools of uncertainty. Using the [VentureDeal model](https://github.com/behappyrightnow/VCDA/blob/master/spreadsheets/VentureDeal.xlsm), we will explain how the uncertainty analysis works. You can also learn about building the [TAM model](https://github.com/behappyrightnow/VCDA/blob/master/docs/TAM.md).
+The spreadsheet model contains special VBA software developed by Somik Raha to perform uncertainty analysis. If the basic structuring of the spreadsheet is followed, then any model within that structure can take advantage of the tools of uncertainty. Using the [VentureDeal model](https://github.com/ulu-ventures/VCDA/blob/master/spreadsheets/VentureDeal.xlsm), we will explain how the uncertainty analysis works. You can also learn about building the [TAM model](https://github.com/behappyrightnow/VCDA/blob/master/docs/TAM.md).
 
 ## Uncertainty Analysis
 There are three key tables in the model that the VBA macros look for. They are:
@@ -13,7 +13,7 @@ There are three key tables in the model that the VBA macros look for. They are:
 * SmartOrgInputTable
 
 All three are required. 
-![Annotated ranges](https://github.com/behappyrightnow/VCDA/blob/master/docs/images/annotationOfRanges.png)
+![Annotated ranges](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/annotationOfRanges.png)
 
 Also, two sheets that should be kept intact are:
 * Tornado
@@ -37,7 +37,7 @@ The steps of the uncertainty algorithm are as follows:
 
 Clicking on the "Evaluate Uncertainty" button will complete 1, 2 and 3 and show the results. On the Tornado page, you will need to use the drop down to select the output metric of interest and click "Update Tornado" as show below.
 
-![Updating Tornado](https://github.com/behappyrightnow/VCDA/blob/master/docs/images/updateTornado.png)
+![Updating Tornado](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/updateTornado.png)
 
 ### Building the Tornado
 Here is the algorithm for constructing a Tornado chart:
@@ -49,12 +49,12 @@ Tornado digrams bring together two key ideas -- [leverage and uncertainty](https
 
 ### Summarizing the Tornado with a Distribution
 Once the Tornado is built, the macro pulls off the top 5 factors and builds a tree with each factor ranging from low to base to high. This operation is called convolution and is recursive in nature. Due to exponential time complexity, we limit it to the top 5 factors which more often than not account for 80-90% of the uncertainty. The convolution gives us a distribution that can be visualized as a Cumulative Distribution Function. The CDF chart is right below the Tornado chart for a given output.
-![CDF](https://github.com/behappyrightnow/VCDA/blob/master/docs/images/tornadoCDF.png)
+![CDF](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/tornadoCDF.png)
 
 ### Building the Full Distribution
 We combine the lifestage uncertainties with the PWMOIC Distribution given Success to get to the Full Distribution. This is done by hardwiring the Full Distributiopn table (on the Full Distribution sheet) to the output PWMOIC Given Cross Chasm Success. Once wired up, the second table to the right makes the adjustment in cell S6 and S7, using pCrossChasm_total to calculate the probability of failure. The remaining probabilities are scaled appropriately. This produces a powerful visualization of the full uncertainty in the deal and lets VCs communicate to entrepreneurs the chance that they will not get any return whatsoever. When the long tail nature of the VC business is captured effectively, entrepreneurs no longer have the pressure to exaggerate their chances of success and can lean into the uncertainty. The Mean PWMOIC calculated is the one used for evaluation and tends to be higher than the Base PWMOIC.
 
-![Full Distribution](https://github.com/behappyrightnow/VCDA/blob/master/docs/images/fullDistribution.png)
+![Full Distribution](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/fullDistribution.png)
 
 
 
