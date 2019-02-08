@@ -4,7 +4,7 @@ Decision Analysis tools for Venture Capital
 ## Introduction
 This project has been seeded with a spreadsheet model that has been developed by Clint Korver over a decade of Decision Analysis of a 100 seed-stage venture deals. The model is designed for enterprise company deals and implements two popular frameworks for enterprise-focused startups -- Crossing the Chasm and The Gorilla Game, both by Jeffrey Moore. 
 
-The spreadsheet model contains special VBA software developed by Somik Raha to perform uncertainty analysis. If the basic structuring of the spreadsheet is followed, then any model within that structure can take advantage of the tools of uncertainty. Using the [VentureDeal model](https://github.com/ulu-ventures/VCDA/blob/master/spreadsheets/VentureDeal.xlsm), we will explain how the uncertainty analysis works. You can also learn about building the [TAM model](https://github.com/behappyrightnow/VCDA/blob/master/docs/TAM.md).
+The spreadsheet model contains special VBA software developed by Somik Raha to perform uncertainty analysis. If the basic structuring of the spreadsheet is followed, then any model within that structure can take advantage of the tools of uncertainty. Using the [VentureDeal model](https://github.com/ulu-ventures/VCDA/blob/master/spreadsheets/VentureDeal.xlsm), we will explain how the uncertainty analysis works. You can also learn about building the [TAM model](https://github.com/ulu-ventures/VCDA/blob/master/docs/TAM.md).
 
 ## Uncertainty Analysis
 There are three key tables in the model that the VBA macros look for. They are:
