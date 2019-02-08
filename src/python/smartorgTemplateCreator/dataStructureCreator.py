@@ -110,7 +110,7 @@ class DataStructureJsonGenerator(object):
             }
 
 
-dsGen = DataStructureJsonGenerator(excelFileName='/Users/somik/Ulu Ventures Dropbox/Somik Raha/Templates/MileAuto/MileAutoV2.xlsm')
+dsGen = DataStructureJsonGenerator(excelFileName='/Users/somik/Ulu Ventures Dropbox/Somik Raha/Templates/Truthy/Truthy.xlsm')
 print(dsGen.templateName)
 template = dsGen.produceJSON()
 print(json.dumps(template, indent=4))
