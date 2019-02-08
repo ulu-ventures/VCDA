@@ -1,2 +1,4 @@
 # VCDA
-DA tools for the VC world
+Decision Analysis tools for Venture Capital
+
+See [docs](https://github.com/behappyrightnow/VCDA/blob/master/docs/README.md) here.
