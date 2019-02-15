@@ -38,7 +38,7 @@ The steps of the uncertainty algorithm are as follows:
 3. Summarize the distribution in the output metrics (Mean, Ten, Fifty, Ninety) next to each output
 4. Produce the full distribution using the PWMOIC given Cross Chasm Success distribution and the lifestage probabilities
 
-Clicking on the "Evaluate Uncertainty" button will complete 1, 2 and 3 and show the results. On the Tornado page, you will need to use the drop down to select the output metric of interest and click "Update Tornado" as show below.
+Clicking on the "Evaluate Uncertainty" button will complete 1, 2 and 3 and show the results. On the Tornado sheet, you will need to use the drop down to select the output metric of interest and click "Update Tornado" as show below.
 
 ![Updating Tornado](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/updateTornado.png)
 
