@@ -20,6 +20,8 @@ Also, two sheets that should be kept intact are:
 * Tornado
 * Full Distribution
 
+The sheet "Model" is also required by the macros, which is where the inputs will be expected to be.
+
 ### inputTable
 This contains the definitions of inputs. Please keep the same spacing format as you see in the VentureDeal template. The macro knows how to figure out how many inputs there are, and the low-base-high ranges for each. It also figures out if the input is a scalar or a distribution. 
 
