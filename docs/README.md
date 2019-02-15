@@ -13,6 +13,7 @@ There are three key tables in the model that the VBA macros look for. They are:
 * SmartOrgInputTable
 
 All three are required. 
+![Annotated output ranges](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/outputDefnTable.png)
 ![Annotated ranges](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/annotationOfRanges.png)
 
 Also, two sheets that should be kept intact are:
