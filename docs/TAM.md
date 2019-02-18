@@ -15,7 +15,7 @@ ethical fiber of candidates applying for jobs and offers an HRTech solution usin
 watch the first 16 minutes of the video below to understand how a bottom-up TAM is created in the context of Truthy.
 [![Watch the video](https://www.uluventures.com/file.cfm/36/docs/MarketMappingSimulation.png)](https://vimeo.com/279467353)
 
-##### The Truth Model
+##### The Truthy Model
 You now have the context behind the [Truthy TAM Model](https://github.com/ulu-ventures/VCDA/blob/master/spreadsheets/Truthy.xlsm). 
 This differs from the VentureDeal model in that the outputs are shown on the Model page directly. The TAM
 model can be seen under calculations. 
