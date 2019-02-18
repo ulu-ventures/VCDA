@@ -1,1 +1,21 @@
-Placeholder for TAM documentation
+### Total Addressable Market
+One of the most important assessments that a VC needs is the Total Addressable Market (TAM) of the opportunity. 
+Coming up with a high-quality TAM assessment is both an art and a science. But first, it is important to note 
+that we are not referring to top-down TAM assessments found in most pitch decks. We have not found it effective
+to use top-down TAM assessments in our decision-making.
+
+A bottom-up TAM assessment differs from a top-down assessment fundamentally in that it is built using the specific 
+business models in operation. The TAM reflects the opportunity arising from the chosen business models.
+
+With that context, we are ready to dive into a sample TAM model embedded in a VC evaluation.
+
+##### The Truthy Simulation
+We will illustrate TAM building using a fictitious case study. Truthy is a company that evaluates the 
+ethical fiber of candidates applying for jobs and offers an HRTech solution using machine learning. Please 
+watch the first 16 minutes of the video to understand how a bottom-up TAM is created in the context of Truthy.
+[![Watch the video](https://www.uluventures.com/file.cfm/36/docs/MarketMappingSimulation.png)](https://vimeo.com/279467353)
+
+##### The Truth Model
+You now have the context behind the [Truthy TAM Model](https://github.com/ulu-ventures/VCDA/blob/master/spreadsheets/Truthy.xlsm). 
+This differs from the VentureDeal model in that the outputs are shown on the Model page directly. The TAM
+model can be seen under calculations. 
