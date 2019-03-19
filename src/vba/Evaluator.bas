@@ -7,13 +7,12 @@
 '''THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Attribute VB_Name = "Evaluator"
-''' Tornado Page wiring
 Sub UpdateTornado()
-Application.ScreenUpdating = False
+    Application.ScreenUpdating = False
     Dim outputTableName As String
     outputTableName = "Tornado_Output" & Sheets(ActiveSheet.Name).Range("Tornado_TableIndex")
     Set outputTable = Sheets(ActiveSheet.Name).Range(outputTableName)
-    
+
     Dim numRows As Integer
     numRows = outputTable.Cells(1000, 1).End(xlUp).Row - outputTable.Cells(1, 1).Row + 1
     Sheets(ActiveSheet.Name).ChartObjects("TornadoChart").Activate
@@ -58,7 +57,7 @@ Sub EvaluateModel()
     outputs = outputsOfInterest(ActiveSheet.Name)
     tornadoResults = tornadoMaker.makeTornadoUsing(outputs, inputsOfInterest(ActiveSheet.Name))
     Set summaryMaker = New clsSummaryMaker
-    
+
     Dim summaryResults() As clsJointDistribution
     summaryResults = summaryMaker.makeSummaryUsing(tornadoResults)
     showSummaryResults ActiveSheet.Name, summaryResults
@@ -79,11 +78,13 @@ Sub updateTornadoPage(sheetName As String, outputs() As clsOutput, summaryResult
         Set dataTableRange = Sheets(sheetName).Range(dataTableRangeName)
         Dim lastRow As Long
         lastRow = dataTableRange.Cells(4, 1).End(xlDown).Row
-        Set clearingRange = Range(dataTableRange.Cells(4, 1), dataTableRange.Cells(lastRow, 10))
-        clearingRange.ClearContents
+        If lastRow < 10000 Then
+            Set clearingRange = Range(dataTableRange.Cells(4, 1), dataTableRange.Cells(lastRow, 10))
+            clearingRange.ClearContents
+        End If
         dataTableRange.Cells(1, 1) = "Output: " & output.Description
         dataTableRange.Cells(4, 1) = "Combined Unc"
-        dataTableRange.Cells(4, 2) = output.Units
+        dataTableRange.Cells(4, 2) = output.units
         Set summaryResult = summaryResults(outputIndex)
         dataTableRange.Cells(4, 6) = summaryResult.Ten
         dataTableRange.Cells(4, 7) = summaryResult.Fifty
@@ -105,7 +106,7 @@ Sub updateTornadoPage(sheetName As String, outputs() As clsOutput, summaryResult
             Dim inputDefn As clsInput
             Set inputDefn = tornadoResult(inputIndex).inputDefn
             dataTableRange.Cells(4 + inputIndex, 1) = inputDefn.Description
-            dataTableRange.Cells(4 + inputIndex, 2) = inputDefn.Units
+            dataTableRange.Cells(4 + inputIndex, 2) = inputDefn.units
             dataTableRange.Cells(4 + inputIndex, 3) = inputDefn.Low
             dataTableRange.Cells(4 + inputIndex, 4) = inputDefn.Base
             dataTableRange.Cells(4 + inputIndex, 5) = inputDefn.High
@@ -139,7 +140,7 @@ Function outputsOfInterest(sheetName) As clsOutput()
     For i = 1 To numOutputs
         Set outputs(i) = New clsOutput
         outputs(i).Description = outputsTable.Cells(i, 1)
-        outputs(i).Units = outputsTable.Cells(i, 3)
+        outputs(i).units = outputsTable.Cells(i, 3)
         outputs(i).CellRef = outputsTable.Cells(i, 5).Address
         outputs(i).sheetName = sheetName
     Next i
@@ -166,7 +167,7 @@ Function inputsOfInterest(sheetName) As clsInput()
             End If
             Set Inputs(numInputs) = New clsInput
             Inputs(numInputs).Description = inputsTable.Cells(currentRow, 2)
-            Inputs(numInputs).Units = inputsTable.Cells(currentRow, 3)
+            Inputs(numInputs).units = inputsTable.Cells(currentRow, 3)
             Inputs(numInputs).IndexCellRef = inputsTable.Cells(currentRow, 4).Address
             Inputs(numInputs).Low = inputsTable.Cells(currentRow, 5)
             Inputs(numInputs).Base = inputsTable.Cells(currentRow, 6)
@@ -177,5 +178,4 @@ Function inputsOfInterest(sheetName) As clsInput()
     Wend
     inputsOfInterest = Inputs
 End Function
-
 
