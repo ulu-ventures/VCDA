@@ -19,7 +19,7 @@ The rest of the video explains how the remaining VC assessments are made in the 
 
 ##### The Truthy Model
 You now have the context behind the [Truthy TAM Model](https://github.com/ulu-ventures/VCDA/blob/master/spreadsheets/Truthy.xlsm). 
-This differs from the VentureDeal model in that the outputs are shown on the Model page directly. The TAM
+This differs from the VentureDeal model (see [main docs](https://github.com/ulu-ventures/VCDA/tree/master/docs) in that the outputs are shown on the Model page directly. The TAM
 model can be seen under calculations. 
 
 ##### More Resources
