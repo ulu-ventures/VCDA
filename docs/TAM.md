@@ -13,7 +13,7 @@ With that context, we are ready to dive into a sample TAM model embedded in a VC
 We will illustrate TAM building using a fictitious case study. Truthy is a company that evaluates the 
 ethical fiber of candidates applying for jobs and offers an HRTech solution using machine learning. Please 
 watch the first 16 minutes of the video below to understand how a bottom-up TAM is created in the context of Truthy.
-[![Watch the video](https://www.uluventures.com/file.cfm/36/docs/MarketMappingSimulation.png)](https://vimeo.com/279467353)
+[![Watch the video](https://github.com/ulu-ventures/VCDA/blob/master/docs/images/marketMapping.png)](https://vimeo.com/279467353)
 
 The rest of the video explains how the remaining VC assessments are made in the context of Truthy's simulation.
 
